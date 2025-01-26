@@ -14,7 +14,7 @@ def createTask():
     newTask = Task(id=taskIdControl ,title=data["title"], description=data.get("description", ""))
     taskIdControl += 1
     tasks.append(newTask)
-    return jsonify({"message": "Nova tarefa criada com sucesso"})
+    return jsonify({"message": "Nova tarefa criada com sucesso", "id": newTask.id})
 
 
 #READ
